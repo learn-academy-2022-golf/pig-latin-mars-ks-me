@@ -33,7 +33,12 @@ const App = () => {
 
       // ACTION ITEM: your Pig Latin logic goes here!
 
-    
+      // eachWord.includes("a","e","i","o","u") === true && eachWord.search("y") > 0
+
+      else {let sliced = eachWord.slice(0, eachWord.search(vowelsArray[0]))
+        let endSlice = eachWord.slice(eachWord.search(vowelsArray[0]), eachWord.length)
+        return endSlice.concat(sliced + "ay")
+      }
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
