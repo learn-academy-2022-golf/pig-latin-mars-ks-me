@@ -41,6 +41,12 @@ const App = () => {
         return endSlice.concat(sliced + "ay")
       }
       
+      else if (eachWord.includes("a","e","i","o","u") === false && eachWord.search("y") > 0) {
+        let sliced = eachWord.slice(0, eachWord.search("y"))
+        let endSlice = eachWord.slice(eachWord.search("y"), eachWord.length)
+        return endSlice.concat(sliced + "ay")
+      }
+      
       else {let sliced = eachWord.slice(0, eachWord.search(vowelsArray[0]))
         let endSlice = eachWord.slice(eachWord.search(vowelsArray[0]), eachWord.length)
         return endSlice.concat(sliced + "ay")
