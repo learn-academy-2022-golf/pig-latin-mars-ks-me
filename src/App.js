@@ -33,7 +33,19 @@ const App = () => {
 
       // ACTION ITEM: your Pig Latin logic goes here!
 
-    
+      // qu-functionality
+      // Words that begin with 'qu' need to have that 'qu' pushed to the end of the word, and be added with 'ay'.
+        // queen becomes eenquay, quarter becomes arterquay
+      // use .search() to find the first instance of characters 'qu' above the 0th index (> -1)
+      // use && (logical and comparison) to search for "qu"
+      // use .slice to place "qu" at the end of the words using +2. eachWord.length ensures the "qu" characters are placed at the end
+      // use .concat method to join all the word components together
+
+      if (eachWord.search("qu") > -1 && eachWord.search("qu") < (eachWord.length/2)) {
+        let sliced = eachWord.slice(0, eachWord.search("qu")+2)
+        let endSlice = eachWord.slice(eachWord.search("qu")+2, eachWord.length)
+        return endSlice.concat(sliced + "ay")
+      }
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
