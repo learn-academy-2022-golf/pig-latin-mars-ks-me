@@ -33,11 +33,16 @@ const App = () => {
 
       // ACTION ITEM: your Pig Latin logic goes here!
 
-      // eachWord.includes("a","e","i","o","u") === true && eachWord.search("y") > 0
+      // Since this is the final portion of the pig latin translator, we went ahead and grabbed the function parts from our first three stories (vowel / qu / y functionality), and compiled it into one big conditional statement.
+      // For the piece that handles the consonant functionality, we simply input the function into an else statement. There's no parentheses (parameter/argument) associated with it since the else serves as our catch all, and handles our consonants.
 
-      if (eachWord.search("qu") > -1 && eachWord.search("qu") < (eachWord.length/2)) {
-        let sliced = eachWord.slice(0, eachWord.search("qu")+2)
-        let endSlice = eachWord.slice(eachWord.search("qu")+2, eachWord.length)
+      if (eachWord[0] === vowelsArray[0]) {
+        return eachWord + "way"
+      }
+
+      else if (eachWord.search("qu") > -1 && eachWord.search("qu") < (eachWord.length)) {
+        let sliced = eachWord.slice(0, eachWord.search("qu"))
+        let endSlice = eachWord.slice(eachWord.search("qu"), eachWord.length)
         return endSlice.concat(sliced + "ay")
       }
       
