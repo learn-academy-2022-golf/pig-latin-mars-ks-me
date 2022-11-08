@@ -40,11 +40,6 @@ const App = () => {
       // characters from the 0 index up to the first instance of 'u' need to be removed, and added to the end of the word
       // finally add 'ay' to the end
 
-      // if (eachWord.includes("qu")) {
-      //   eachWord.slice(0, eachWord.indexOf("u"))
-
-      // }
-
       if (eachWord.search("qu") > -1 && eachWord.search("qu") < (eachWord.length/2)) {
         let sliced = eachWord.slice(0, eachWord.search("qu")+2)
         let endSlice = eachWord.slice(eachWord.search("qu")+2, eachWord.length)
