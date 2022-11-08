@@ -32,8 +32,18 @@ const App = () => {
       console.log("vowelsArray:", vowelsArray)
 
       // ACTION ITEM: your Pig Latin logic goes here!
+
       // Words with no vowels other than "y" (ex. fry)
-      
+      // check to see that eachWord does not include any vowels, AND that it includes a y beyond the 0th index
+      // call slice upon eachWord with parameters specifying the 0th index and the index of the "y" character. Save this into a variable called sliced.
+      // call slice upon eachWord again, specifying the index of the "y" character, and the index of the end of eachWord (eachWord.length). Save this to another variable called endSlice.
+      // Finally, return the result of calling concat upon endSlice with arguments of the sliced variable plus string "ay"
+
+      if (eachWord.includes("a","e","i","o","u") === false && eachWord.search("y") > 0) {
+        let sliced = eachWord.slice(0, eachWord.search("y"))
+        let endSlice = eachWord.slice(eachWord.search("y"), eachWord.length)
+        return endSlice.concat(sliced + "ay")
+      }
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
