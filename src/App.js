@@ -33,7 +33,18 @@ const App = () => {
 
       // ACTION ITEM: your Pig Latin logic goes here!
 
-    
+      // filter? through each item in the array, looking for words beginning with vowels. we want to add "way" to the end of all those words
+      // If statement checking for this condition, and a boolean to rule true/false. If true, use some string method to add "way" to end. If false, go to next function
+      // Possible string methods: .substr() / .concat()
+        
+      // call filter on arrayOfUserInput, filter words from that array that start with vowels
+      // those words that start with vowels
+
+      // const startWithVowels = (array) => {
+      //   let vowels = [a, e, i, o, u]
+      //   return array.filter(value => value[0] === vowels)
+      // }
+      // let newString = "";
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
