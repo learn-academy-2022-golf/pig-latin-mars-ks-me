@@ -32,8 +32,8 @@ const App = () => {
       console.log("vowelsArray:", vowelsArray)
 
       // ACTION ITEM: your Pig Latin logic goes here!
-
-    
+      // Words with no vowels other than "y" (ex. fry)
+      
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
